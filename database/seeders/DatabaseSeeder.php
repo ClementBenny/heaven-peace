@@ -15,12 +15,12 @@ class DatabaseSeeder extends Seeder
         // --- Users ---
         User::factory()->create([
             'name'     => 'Admin',
-            'email'    => 'admin@farm.local',
-            'password' => bcrypt('password'),
+            'email'    => 'admin@giftshop.local',
+            'password' => bcrypt('heavenpeace2026'),
             'role'     => 'admin',
         ]);
 
-        User::factory()->create([
+        /* User::factory()->create([
             'name'     => 'Customer',
             'email'    => 'customer@farm.local',
             'password' => bcrypt('password'),
@@ -40,15 +40,19 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
             'role'     => 'staff',
         ]);
+        */
 
         // --- Categories ---
+        /*
         $vegetables = Category::firstOrCreate(['slug' => 'vegetables'], ['name' => 'Vegetables']);
         $fruits     = Category::firstOrCreate(['slug' => 'fruits'],     ['name' => 'Fruits']);
         $dairy      = Category::firstOrCreate(['slug' => 'dairy'],      ['name' => 'Dairy']);
         $poultry    = Category::firstOrCreate(['slug' => 'poultry'],    ['name' => 'Poultry']);
         $other      = Category::firstOrCreate(['slug' => 'other'],      ['name' => 'Other']);
+        */
 
         // --- Products ---
+        /*
         Product::create([
             'name'        => 'Tomatoes',
             'description' => 'Fresh vine tomatoes picked daily.',
@@ -103,8 +107,10 @@ class DatabaseSeeder extends Seeder
             'is_active'   => true,
             'category_id' => $dairy->id,
         ]);
+        */
 
         // --- Sample order for customer ---
+        /*
         $customer = User::where('email', 'customer@farm.local')->first();
         $products = Product::take(3)->get();
 
@@ -128,5 +134,6 @@ class DatabaseSeeder extends Seeder
         }
 
         $order->update(['total' => $total]);
+        */
     }
 }
